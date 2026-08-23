@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact | Portfolio</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="contact.css"><script src="contact.js" defer></script></head>
+<body>
+    <!-- STEP 1: Shared navigation links every portfolio page. -->
+    <header class="site-header">
+        <a href="../home/home.html">
+            <img src="../images/logo.png" alt="Chris portfolio home">
+        </a>
+        <nav>
+            <a href="../home/home.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../skills/skills.html">Skills</a>
+            <a href="../projects/projects.html">Projects</a>
+            <a href="../blogs/blogs.html">Blog</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <a class="page-button" href="contact.html">Hire Me ↗</a>
+    </header>
+<main class="page-main">
+    <section class="page-intro">
+        <span class="kicker">
+            LET'S WORK TOGETHER</span>
+            <h1>Have a project in mind?</h1>
+            <p>I’m open to discussing new website projects and opportunities. Let’s create something amazing together.</p>
+        </section>
+        <section class="contact-layout">
+            <article class="content-card">
+                <span class="card-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                <h2>Get in touch</h2>
+                <p>Send a message using the form and I’ll get back to you as soon as possible.</p>
+                <div class="tag-list">
+                    <a class="tag" href="mailto:eshiekwechristian@gmail.com">eshiekwechristian@gmail.com</a>
+                    <a class="tag" href="tel:+905428538762">+90 (5428) 538 762</a>
+                </div>
+            </article>
+           
+            <form id="contactForm"
+             action="https://formspree.io/f/xeajdael"
+            method="POST"
+ >
+                <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required>
+                </label>
+                <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+                <label >Message<textarea name="message" placeholder="Tell me about your project" required></textarea></label>
+                <button class="page-button" type="submit">Send message ↗</button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+           
+        </section>
+    </main>
+    <footer class="page-footer">© 2026 Chris Developer. All rights reserved.</footer>
+</body></html>
