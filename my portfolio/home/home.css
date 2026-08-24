@@ -38,6 +38,46 @@ a { color: inherit; text-decoration: none; }
     justify-content: space-between;
     gap: 28px;
     border-bottom: 1px solid var(--line);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 999;
+     background: rgba(3, 9, 20, 0.85);
+
+    border-bottom: 1px solid rgba(39, 54, 83, 0.8);
+
+     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    
+    
+    
+
+    /* .home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 18px max(24px, calc((100% - var(--max)) / 2));
+
+    background: rgba(3, 9, 20, 0.85);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(39, 54, 83, 0.8);
+} */
 }
 
 .home-header  img { 
@@ -109,6 +149,7 @@ a { color: inherit; text-decoration: none; }
     min-height: 500px;
     overflow: hidden;
     border-bottom: 1px solid rgba(142, 157, 190, .08);
+    margin-top: 40px;
 }
 
 .section1::before {
@@ -392,14 +433,52 @@ color: #5976fb;}
     color: #151f36;
 }
 
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #5976fb,
+        #a578ff
+    );
+
+    z-index: 9999;
+
+    box-shadow: 0 0 10px rgba(165, 120, 255, 0.7);
+}
+
 /* STEP 8: Style the newly added contact, testimonial, and social footer. */
 .site-footer { padding-top: 38px; background: #061222; border-top: 1px solid var(--line); }
 .footer-content { display: grid; grid-template-columns: .92fr 1.25fr .74fr; gap: 42px; align-items: center; padding-bottom: 30px; }
 .footer-contact h2 { margin: 9px 0; font-size: 1.38rem; }
 .footer-contact p, .footer-testimonial p { margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.65; }
 .footer-contact-link { display: inline-flex; gap: 17px; margin-top: 16px; padding: 10px 17px; }
-.footer-testimonial { margin: 0; padding: 20px 24px; border: 1px solid #223650; border-radius: 8px; background: rgba(3, 16, 31, .58); }
-.footer-testimonial blockquote { display: flex; gap: 14px; margin: 0; }
+.footer-testimonial { margin: 0;
+     padding: 20px 24px;
+      border: 1px solid #223650;
+       border-radius: 8px;
+        background: rgba(3, 16, 31, .58); }
+.footer-testimonial blockquote { display: flex; 
+    gap: 14px;
+     margin: 0; }
 .quote-mark { color: #7b69ff; font-size: 3rem; font-weight: 800; line-height: .8; }
 .footer-testimonial figcaption { display: flex; gap: 10px; align-items: center; margin-top: 18px; font-size: .69rem; }
 .footer-testimonial figcaption img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
@@ -435,6 +514,32 @@ color: #5976fb;}
               .home-header {
         flex-wrap: wrap;
           padding-block: 12px;
+          
+
+          .home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 18px max(24px, calc((100% - var(--max)) / 2));
+
+    background: rgba(3, 9, 20, 0.85);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(39, 54, 83, 0.8);
+}
     }
 
     .home-nav {
@@ -502,6 +607,10 @@ color: #5976fb;}
 }
 
 
+.footer-content{
+display: flex;
+flex-direction: column;
+}
 }
 
 

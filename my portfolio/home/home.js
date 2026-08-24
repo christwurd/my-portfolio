@@ -28,3 +28,37 @@ if (slides.length > 1) {
     setInterval(() => showSlide(activeSlide + 1), 5000);
 }
 
+const revealElements = document.querySelectorAll(".scroll-reveal");
+
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
+
+const scrollProgress = document.querySelector(".scroll-progress");
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progress =
+        (scrollTop / documentHeight) * 100;
+
+    scrollProgress.style.width = `${progress}%`;
+});
